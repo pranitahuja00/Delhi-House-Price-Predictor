@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<center>
+<style>
+div.github{
+width: 80%;
+	text-align: right;
+	padding-right: 50px;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding-left: 50px;
+}
+div.github a{
+    color: #D2B48C;
+	text-decoration: none;
+	background-color: rgba(0, 0, 0, 0.6);
+	font-size: 20px;
+}
+div.form{
+background: rgba(0, 0, 0, 0.6);
+padding-bottom:25px
+padding-top:50px
+}
+label{
+color: #D2B48C;
+font-family:arial;
+}
+h1{
+color: #D2B48C;
+font-family:arial;
+text-shadow: 2px 2px 5px silver;
+
+}
+h3{
+color: #D2B48C;
+font-family:arial;
+font-weight: normal;
+}
+p{
+color: #D2B48C;
+font-family:arial;
+}
+output{
+color: #D2B48C;
+font-family:arial;
+font-size: 20px;
+}
+input {
+  border: 1px solid silver;
+  background-color: black;
+  color: #D2B48C;
+  font-family:arial;
+}
+input[type= submit] {
+  border: 1px solid silver;
+  background-color: black;
+  color: #D2B48C;
+  font-family:arial;
+  font-size: 20px;
+}
+select {
+  border: 1px solid silver;
+  background-color: black;
+  color: #D2B48C;
+  font-family:arial;
+}
+body{
+background: rgba(0, 0, 0, 0.5);
+  background-image: url("{{ url_for('static', filename='pexels-pixabay-276514.jpg') }}");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+    }
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  height: 230px;
+
+}
+
+</style>
+<head>
+<title>Delhi House Price Predictor</title>
+</head>
+<div class="github">
+    <a href="https://github.com/pranitahuja00/Delhi-House-Price-Predictor.git">GITHUB</a> </li>
+</div>
+<body>
+<div class = "form">
+<h1>DELHI PROPERTIES</h1>
+<p>Enter the details of your desired house</p>
+
+<form method ="POST">
+  <label for="size">Size in sq feet:</label>
+  <input type="number" id="size" name="size" max = 6400 min = 200 required><br><br>
+  
+  <label for="location">Location:</label>
+  <select id="location" name="location" size="1" required>
+     <option value="" disabled selected hidden>Please select one</option>
+    <option value=55>Sector 10 Dwarka</option>
+    <option value=96>Uttam Nagar</option>
+    <option value=53>Sarita Vihar</option>
+    <option value=11>Dwarka Mor</option>
+    <option value=80>Sector 7 Dwarka</option>
+    <option value=79>Sector 6 Dwarka</option>
+    <option value=78>Sector 5 Dwarka</option>
+    <option value=71>Sector 23 Rohini</option>
+    <option value=36>Mayur Vihar II</option>
+    <option value=73>Sector 24 Rohini</option>
+    <option value=56>Sector 11 Dwarka</option>
+    <option value=70>Sector 23 Dwarka</option>
+    <option value=57>Sector 12 Dwarka</option>
+    <option value=98>West End</option>
+    <option value=82>Sector 9 Rohini</option>
+    <option value=38>Mundka</option>
+    <option value=59>Sector 13 Rohini</option>
+    <option value=20>Jamia Nagar</option>
+    <option value=64>Sector 19 Dwarka</option>
+    <option value=61>Sector 17 Dwarka</option>
+    <option value=3>Bindapur</option>
+    <option value=84>Sector-18 Dwarka</option>
+    <option value=97>Vasant Kunj</option>
+    <option value=91>Shastri Nagar</option>
+    <option value=85>Sector-8 Rohini</option>
+    <option value=81>Sector 9 Dwarka</option>
+    <option value=90>Shanti Park Dwarka</option>
+    <option value=13>Govindpuri</option>
+    <option value=68>Sector 22 Dwarka</option>
+    <option value=34>Matiala</option>
+    <option value=52>Saket</option>
+    <option value=31>Mahavir Enclave</option>
+    <option value=5>Burari</option>
+    <option value=88>Shahdara</option>
+    <option value=2>Babarpur</option>
+    <option value=27>Khanpur</option>
+    <option value=58>Sector 13 Dwarka</option>
+    <option value=33>Mansa Ram Park</option>
+    <option value=17>Green Park</option>
+    <option value=22>Kalkaji</option>
+    <option value=77>Sector 4 Dwarka</option>
+    <option value=9>DLF Phase 5</option>
+    <option value=76>Sector 3 Dwarka</option>
+    <option value=7>Chittaranjan Park</option>
+    <option value=6>Chattarpur</option>
+    <option value=14>Greater Kailash</option>
+    <option value=83>Sector-14 Rohini</option>
+    <option value=41>Paschim Vihar</option>
+    <option value=43>Pitampura</option>
+    <option value=63>Sector 18B Dwarka</option>
+    <option value=65>Sector 2 Dwarka</option>
+    <option value=21>Jasola</option>
+    <option value=44>Pochanpur Colony</option>
+    <option value=40>Palam</option>
+    <option value=50>Saidabad</option>
+    <option value=4>Budh Vihar</option>
+    <option value=74>Sector 25 Rohini</option>
+    <option value=62>Sector 18A Dwarka</option>
+    <option value=87>Sewak Park</option>
+    <option value=72>Sector 23B Dwarka</option>
+    <option value=47>Rohini sector 24</option>
+    <option value=75>Sector 28 Rohini</option>
+    <option value=46>Rohini Sector 9</option>
+    <option value=45>Rohini Extension</option>
+    <option value=102>Nawada</option>
+    <option value=0>Alaknanda</option>
+    <option value=69>Sector 22 Rohini</option>
+    <option value=29>Lajpat Nagar</option>
+    <option value=95>South Extension 2</option>
+    <option value=60>Sector 16B Dwarka</option>
+    <option value=92>Sheikh Sarai</option>
+    <option value=93>Sidhartha Nagar</option>
+    <option value=86>Sector-D Vasant Kunj</option>
+    <option value=19>Hauz Khas</option>
+    <option value=23>Kalkaji Extension</option>
+    <option value=16>Greater kailash 1</option>
+    <option value=30>Lajpat Nagar III</option>
+    <option value=49>Safdarjung Enclave</option>
+    <option value=15>Greater Kailash II</option>
+    <option value=51>Sainik Farms</option>
+    <option value=66>Sector 20 Rohini</option>
+    <option value=100>greater kailash Enclave 1</option>
+    <option value=8>DLF Farms</option>
+    <option value=37>Mehrauli</option>
+    <option value=32>Mahipalpur</option>
+    <option value=101>Mayur vihar phase 1</option>
+    <option value=54>Sarvodaya Enclave</option>
+    <option value=24>Karol Bagh</option>
+    <option value=99>West Sagarpur</option>
+    <option value=1>Ashok Vihar</option>
+    <option value=67>Sector 21 Dwarka</option>
+    <option value=12>East of Kailash</option>
+    <option value=28>Khirki Extension</option>
+    <option value=10>Dashrath Puri</option>
+    <option value=48>Sultanpur</option>
+    <option value=42>Patparganj</option>
+    <option value=26>Kaushambi</option>
+    <option value=89>Shakurbasti</option>
+    <option value=18>Hari Nagar</option>
+    <option value=94>Siri Fort</option>
+    <option value=25>Katwaria Sarai</option>
+    <option value=35>Mayur Vihar</option>
+    <option value=39>Nasirpur</option>
+  </select><br>
+  
+  <br><label for="bedrooms">Choose the number of bedrooms:</label>
+<select id="bedrooms" name="bedrooms" required>
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+</select><br>
+
+<br><input type="radio" id="resale" name="resale" value=1 required>
+  <label for="resale">Resale</label>
+  <input type="radio" id="new" name="resale" value=0>
+  <label for="new">New</label><br>
+  
+  <br><div class="row">
+  <div class="column">
+    <h3>FURNITURE</h3>
+    <input type="checkbox" id="bed" name="bed" value=1>
+    <label for="bed">Bed</label><br>
+    <input type="checkbox" id="dining" name="dining" value=1>
+    <label for="dining">Dining Table</label><br>
+    <input type="checkbox" id="sofa" name="sofa" value=1>
+    <label for="sofa">Sofa</label><br>
+    <input type="checkbox" id="wardrobe" name="wardrobe" value=1>
+    <label for="wardrobe">Wardrobe</label><br>
+  </div>
+  <div class="column">
+    <h3>FEATURES</h3>
+    <input type="checkbox" id="harvesting" name="harvesting" value=1>
+    <label for="harvesting">Rain Water Harvesting</label><br>
+    <input type="checkbox" id="games" name="games" value=1>
+    <label for="games">Indoor Games</label><br>
+    <input type="checkbox" id="intercom" name="intercom" value=1>
+    <label for="intercom">Intercom</label><br>
+    <input type="checkbox" id="security" name="security" value=1>
+    <label for="security">Security</label><br>
+    <input type="checkbox" id="backup" name="backup" value=1>
+    <label for="backup">Power Backup</label><br>
+    <input type="checkbox" id="fridge" name="fridge" value=1>
+    <label for="fridge">Refrigerator</label><br>
+    <input type="checkbox" id="staff" name="staff" value=1>
+    <label for="staff">Maintenance Staff</label><br>
+  </div>
+  <div class="column">
+    <h3>EXTRA ADD-ONS</h3>
+    <input type="checkbox" id="gym" name="gym" value=1>
+    <label for="gym">Gymnasium</label><br>
+    <input type="checkbox" id="pool" name="pool" value=1>
+    <label for="pool">Swimming Pool</label><br>
+    <input type="checkbox" id="utility" name="utility" value=1>
+    <label for="utility">Utility Room</label><br>
+    <input type="checkbox" id="play" name="play" value=1>
+    <label for="play">Play Area for kids</label><br>
+    <input type="checkbox" id="garden" name="garden" value=1>
+    <label for="garden">Garden</label><br>
+    <input type="checkbox" id="parking" name="parking" value=1>
+    <label for="parking">Car Parking</label><br>
+    <input type="checkbox" id="quarter" name="quarter" value=1>
+    <label for="quarter">Staff Quarter</label><br>
+    <input type="checkbox" id="lift" name="lift" value=1>
+    <label for="lift">Lift</label><br>
+  </div>
+</div><br>
+   <output name="price" for="ab">Approximate Price: {{ price1 }}</output><br>
+  <br><input type="submit" value="Submit"><br>
+</form>
+</div>
+</body>
+</center>
+</html>
