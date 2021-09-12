@@ -10,7 +10,6 @@ isort==5.9.3
 itsdangerous==2.0.1  
 jinja2==3.0.1
 joblib==1.0.1
-jpeg==9b
 json5==0.9.6
 jsonschema==3.2.0
 markupsafe==2.0.1
