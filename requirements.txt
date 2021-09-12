@@ -14,8 +14,6 @@ json5==0.9.6
 jsonschema==3.2.0
 markupsafe==2.0.1
 matplotlib==3.4.2
-matplotlib-base==3.4.2
-matplotlib-inline==0.1.2
 mysql-connector-python==8.0.21
 numpy==1.20.3
 numpy-base==1.20.3
