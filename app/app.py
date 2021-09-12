@@ -11,7 +11,7 @@ model_temp = pickle.load(open('app/delhi_house.pkl', 'rb'))
 def hello():
     request_type = request.method
     if(request_type=="GET"):
-        return render_template("app/interface.html")
+        return render_template("interface.html")
     else:
         input_list = []
         size = request.form["size"]
@@ -104,7 +104,7 @@ def hello():
        
         pred= model_temp.predict(input_1)
         price2 = str("₹{:,.2f}".format(round(pred[0])))
-        return render_template("app/interface.html", price1 = price2)
+        return render_template("interface.html", price1 = price2)
 
 if __name__ == "__main__":
     app.run(debug=False)
