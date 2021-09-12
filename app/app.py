@@ -104,7 +104,7 @@ def hello():
        
         pred= model_temp.predict(input_1)
         price2 = str("₹{:,.2f}".format(round(pred[0])))
-        return render_template("interface.html", price1 = price2)
+        return render_template("app/interface.html", price1 = price2)
 
 if __name__ == "__main__":
     app.run(debug=False)
